@@ -1,0 +1,95 @@
+body{
+    background-color: black;
+}
+*{
+    margin: 0; 
+    
+}
+@media only screen and(min-width: 455px) {
+    section::before{
+        content: "";
+        position: absolute;
+        height: 100px;
+        width: 100px;
+        transform: translate(-150px,-100px);
+        border-radius: 100%;
+        background: linear-gradient(90deg,rgb(12, 89, 255),rgb(185, 191, 247));
+        box-shadow: 24px 48px 840px rgb(12, 89, 255);
+    }
+    
+}
+section{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective :1000px;
+}
+section::before{
+    content: "";
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    transform: translate(-150px,-100px);
+    border-radius: 100%;
+    background: linear-gradient(90deg,rgb(12, 89, 255),rgb(185, 191, 247));
+    box-shadow: 24px 48px 840px rgb(12, 89, 255);
+}
+section::after{
+    content: "";
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    transform: translate(150px,100px);
+    border-radius: 100%;
+    background: linear-gradient(90deg,rgb(12, 89, 255),rgb(185, 191, 247));
+    box-shadow: 24px 48px 840px rgb(12, 89, 255);
+}
+.container{
+    
+    position:relative;
+    height: 199px;
+    width: 345px; 
+    z-index: 100;
+    transition: 0.6s;
+    transform-style: preserve-3d;
+}
+.container:hover{
+    transform: rotateY(180deg);    
+}
+.container .card{
+    position : absolute;
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+    box-shadow: 24px 48px 840px ;
+    border-radius: 10%;
+    background:rgba(255, 255, 255, 0.11);
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(77, 72, 72,0.1);
+    backface-visibility: hidden;
+}
+ .container img{
+    height: 50%;
+    border-radius: 50%;
+    position: relative;
+    top:2rem;
+    left:7.4rem;
+}
+p{
+    color: rgb(181, 195, 240);
+    text-align: center;
+    position: relative;
+    top: 3rem;
+}
+.card.back-side{
+    transform:rotateY(180deg);
+}
+ul{
+    color: rgb(181, 195, 240);
+    position:relative;
+    top: 5rem;
+    left:7rem;
+}
